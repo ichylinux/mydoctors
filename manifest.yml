@@ -1,0 +1,4 @@
+---
+applications:
+- name: mydoctors
+  command: node app.js
