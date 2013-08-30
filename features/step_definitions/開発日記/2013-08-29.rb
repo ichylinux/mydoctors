@@ -1,7 +1,8 @@
 # coding: UTF-8
 
 もし /^(.*?) からインストーラをダウンロード$/ do |url|
-  assert_visit url
+  visit url
+  capture
 end
 
 もし /^インストーラを実行$/ do |string|

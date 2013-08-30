@@ -1,3 +1,3 @@
-#!/usr/bin/env rake
+# coding: UTF-8
 
 require 'daddy'
