@@ -17,5 +17,6 @@ end
 もし /^依存モジュールをインストール$/ do |string|
 end
 
-もし /^アプリを起動$/ do |string|
+もし /^アプリを起動し、http:\/\/localhost:3000 にアクセス$/ do |string|
+  assert_visit '/'
 end

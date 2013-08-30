@@ -23,7 +23,7 @@
     $ cd mydoctors
     $ npm install
     """
-  * アプリを起動
+  * アプリを起動し、http://localhost:3000 にアクセス
     """
     $ node app
     """
