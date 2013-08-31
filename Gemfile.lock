@@ -39,13 +39,13 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    cf (5.2.0)
-      addressable (~> 2.2)
+    cf (5.2.2)
+      addressable
       caldecott-client (~> 0.0.2)
-      cfoundry (~> 4.3.0)
-      interact (~> 0.5)
-      json_pure (~> 1.6)
-      mothership (>= 0.5.1, < 1.0)
+      cfoundry (~> 4.3.5.rc1)
+      interact (>= 0.5)
+      json_pure
+      mothership (>= 0.5.1)
       multi_json (~> 1.3)
       rest-client (~> 1.6)
       uuidtools (~> 2.1)
@@ -72,7 +72,7 @@ GEM
       cucumber (>= 1.2.0)
       nokogiri (>= 1.5.0)
       rails (>= 3.0.0)
-    daddy (0.1.10)
+    daddy (0.1.11)
       capybara
       ci_reporter
       cucumber
@@ -116,7 +116,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.24)
+    mime-types (1.25)
     mini_portile (0.5.1)
     mothership (0.5.1)
     multi_json (1.7.9)
