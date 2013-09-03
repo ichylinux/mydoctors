@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>My Doctors</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>My Doctors</h1>
 
-    <form action="/">
+    <form action="/" method="POST">
       <div>
         <label for="hospitalName">病院の名前</label>
         <input type="text" name="hospitalName" />
@@ -44,6 +43,16 @@
         <input type="submit" value="登録" />
       </div>
     </form>
+
+    <table>
+      <% for (var i = 0; i < ratings.length; i ++) { %>
+        <tr>
+          <td><%= ratings[i].hospitalName %></td>
+          <td><%= ratings[i].doctorName %></td>
+          <td><%= ratings[i].rating %></td>
+        </tr>
+      <% } %>
+    </table>
 
   </body>
 </html>
