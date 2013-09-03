@@ -2,7 +2,34 @@
 
 機能:
 
-  シナリオ: Cloud Foundry にデプロイ
+  シナリオ: CloudFoundryにデプロイ
+    * https://console.run.pivotal.io/register からアカウント作成
     * Rubyをインストール
-    * Gemfileを作成し、gem cf を設定
-    * sudo bundle install
+    * CloundFoundry用のツールをインストール
+      """
+      <b>
+      $ sudo gem install cf
+      </b>
+      """
+    * デプロイ構成を管理する manifest.yml を作成
+    * デプロイ先のターゲットを設定
+      """
+      <b>
+      $ cf target api.run.pivotal.io
+      </b>
+      """
+    * ログイン
+      """
+      <b>
+      $ cf login
+      </b>
+      email>
+      password>
+      """
+    * アプリをPUSH
+      """
+      <b>
+      $ cf push
+      </b>
+      """
+

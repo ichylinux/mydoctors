@@ -1,12 +1,25 @@
 # coding: UTF-8
 
+もし /^(.*?) からアカウント作成$/ do |url|
+  visit url
+  capture
+end
+
 もし /^Rubyをインストール$/ do
 end
 
-もし /^Gemfileを作成し、gem cf を設定$/ do
-  show 'Gemfile', :as => 'new', :to => 5
+もし /^CloundFoundry用のツールをインストール$/ do |string|
 end
 
-もし /^sudo bundle install$/ do
-  show 'Gemfile.lock', :as => 'new', :from => 199, :to => 200
+もし /^デプロイ構成を管理する (.*?) を作成$/ do |file|
+  show file, :as => 'new'
+end
+
+もし /^デプロイ先のターゲットを設定$/ do |string|
+end
+
+もし /^ログイン$/ do |string|
+end
+
+もし /^アプリをPUSH$/ do |string|
 end
