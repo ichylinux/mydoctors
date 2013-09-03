@@ -5,3 +5,6 @@ body {
 a {
   color: #00b7ff;
 }
+span.spacer {
+  margin: 10px;
+}
