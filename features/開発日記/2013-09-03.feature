@@ -6,7 +6,7 @@
     * MongoDBをインストール
       """
       <b>
-      $ sudo yum install mongodb mongodb-server
+      $ sudo yum install --enablerepo=epel mongodb-server
       </b>
       """
     * MongDBを起動
@@ -19,6 +19,12 @@
       """
       <b>
       $ sudo npm install -g mongodb
+      </b>
+      """
+    * パッケージ構成を修正
+    * パッケージを更新
+      """
+      <b>
       $ npm install
       </b>
       """
