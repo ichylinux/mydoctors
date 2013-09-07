@@ -15,3 +15,15 @@ end
 
 もし /^パッケージを更新$/ do |string|
 end
+
+もし /^モデルを作成$/ do
+  show 'models/rating.js', :as => 'new'
+end
+
+もし /^コントローラを修正$/ do
+  git_diff 'routes/index.js'
+end
+
+もし /^ビューを修正$/ do
+  git_diff 'views/index.ejs'
+end
