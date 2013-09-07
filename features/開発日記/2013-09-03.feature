@@ -12,6 +12,7 @@
     * MongDBを起動
       """
       <b>
+      $ mkdir -p data
       $ mongod --dbpath data &
       </b>
       """

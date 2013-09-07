@@ -9,47 +9,30 @@
 
     <form action="/" method="POST">
       <div>
-        <label for="hospitalName">病院の名前</label>
-        <input type="text" name="hospitalName" />
+        <label>病院の名前 <input type="text" name="hospitalName" /></label>
       </div>
       <div>
-        <label for="doctorName">医者の名前</label>
-        <input type="text" name="doctorName" />
+        <label>医者の名前 <input type="text" name="doctorName" /></label>
       </div>
       <div>
         <span>評価</span>
 
-        <input type="radio" id="rating_1" name="rating" value="1" />
-        <label for="rating_1">だめ</label>
-        <span class="spacer"></span>
-
-        <input type="radio" id="rating_2" name="rating" value="2" />
-        <label for="rating_2">なんかだめ</label>
-        <span class="spacer"></span>
-
-        <input type="radio" id="rating_3" name="rating" value="3" />
-        <label for="rating_3">ふつう</label>
-        <span class="spacer"></span>
-
-        <input type="radio" id="rating_4" name="rating" value="4" />
-        <label for="rating_4">なかなかよい</label>
-        <span class="spacer"></span>
-
-        <input type="radio" id="rating_5" name="rating" value="5" />
-        <label for="rating_5">かなりよい</label>
-        <span class="spacer"></span>
+        <% for (var i = 0; i < RATINGS.length; i ++) { %>
+          <label><input type="radio" name="rating" value="<%= RATINGS[i][0] %>" /> <%= RATINGS[i][1] %></label>
+          <span class="spacer"></span>
+        <% } %>
       </div>
       <div>
         <input type="submit" value="登録" />
       </div>
     </form>
 
-    <table>
+    <table class="ratings">
       <% for (var i = 0; i < ratings.length; i ++) { %>
         <tr>
           <td><%= ratings[i].hospitalName %></td>
           <td><%= ratings[i].doctorName %></td>
-          <td><%= ratings[i].rating %></td>
+          <td><%= Rating.rating_name(ratings[i].rating) %></td>
         </tr>
       <% } %>
     </table>

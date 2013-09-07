@@ -10,7 +10,7 @@ exports.index = function(req, res) {
 
   } else {
     var client = require('mongodb').MongoClient;
-    Rating.index(function(err, docs) {
+    Rating.search(function(err, docs) {
       res.render('index', {ratings: docs});
     });
   }

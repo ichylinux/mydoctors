@@ -8,3 +8,6 @@ a {
 span.spacer {
   margin: 10px;
 }
+table.ratings {
+  margin: 20px 0;
+}
