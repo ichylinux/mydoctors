@@ -1,8 +1,3 @@
-
-/*
- * GET home page.
- */
-
 require('../models/rating');
 
 var index = function(req, res) {
