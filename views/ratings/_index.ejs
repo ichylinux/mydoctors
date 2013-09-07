@@ -1,0 +1,9 @@
+<table class="ratings">
+  <% for (var i = 0; i < ratings.length; i ++) { %>
+    <tr>
+      <td><%= ratings[i].hospitalName %></td>
+      <td><%= ratings[i].doctorName %></td>
+      <td><%= Rating.rating_name(ratings[i].rating) %></td>
+    </tr>
+  <% } %>
+</table>

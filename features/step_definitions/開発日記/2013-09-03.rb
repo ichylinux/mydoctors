@@ -26,4 +26,6 @@ end
 
 もし /^ビューを修正$/ do
   git_diff 'views/index.ejs'
+  show 'views/ratings/_form.ejs', :as => 'new'
+  show 'views/ratings/_index.ejs', :as => 'new'
 end

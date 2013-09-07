@@ -1,41 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Doctors</title>
+    <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>My Doctors</h1>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
 
-    <form action="/" method="POST">
-      <div>
-        <label>病院の名前 <input type="text" name="hospitalName" /></label>
-      </div>
-      <div>
-        <label>医者の名前 <input type="text" name="doctorName" /></label>
-      </div>
-      <div>
-        <span>評価</span>
-
-        <% for (var i = 0; i < RATINGS.length; i ++) { %>
-          <label><input type="radio" name="rating" value="<%= RATINGS[i][0] %>" /> <%= RATINGS[i][1] %></label>
-          <span class="spacer"></span>
-        <% } %>
-      </div>
-      <div>
-        <input type="submit" value="登録" />
-      </div>
-    </form>
-
-    <table class="ratings">
-      <% for (var i = 0; i < ratings.length; i ++) { %>
-        <tr>
-          <td><%= ratings[i].hospitalName %></td>
-          <td><%= ratings[i].doctorName %></td>
-          <td><%= Rating.rating_name(ratings[i].rating) %></td>
-        </tr>
-      <% } %>
-    </table>
-
+    <% include ratings/_form %>
+    <% include ratings/_index %>
   </body>
 </html>
