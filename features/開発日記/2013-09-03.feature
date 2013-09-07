@@ -15,12 +15,6 @@
       $ mongod --dbpath data &
       </b>
       """
-    * MongoDBドライバーをインストール
-      """
-      <b>
-      $ sudo npm install -g mongodb
-      </b>
-      """
     * パッケージ構成を修正
     * パッケージを更新
       """

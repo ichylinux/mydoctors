@@ -6,7 +6,6 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "cf-autoconfig": "*",
     "express": "3.3.7",
     "ejs": "*",
     "mongodb": "*",
