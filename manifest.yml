@@ -2,3 +2,9 @@
 applications:
 - name: mydoctors
   command: node app.js
+  services:
+    mongolab-cf074:
+      label: mongolab
+      provider: mongolab
+      version: n/a
+      plan: sandbox
