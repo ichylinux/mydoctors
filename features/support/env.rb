@@ -19,12 +19,15 @@ at_exit do
   end
 end
 
+retry_count = 10
 server_running = false
 until server_running do
   begin
     HTTParty.get(Capybara.app_host)
     server_running = true
   rescue => e
+    retry_count -= 1
+    raise e if retry_count == 0
     sleep 1
   end
 end
